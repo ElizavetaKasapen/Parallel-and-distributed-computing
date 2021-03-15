@@ -27,6 +27,7 @@ namespace Lab_02
             "https://bipbap.ru/wp-content/uploads/2017/04/maxresdefault-10.jpg",
             "https://bipbap.ru/wp-content/uploads/2017/04/maxresdefault-1-4.jpg"
             };
+            // remote access
             stopwatch.Restart();
             foreach (String url in imagesURL)
             {
@@ -34,7 +35,8 @@ namespace Lab_02
             }
             stopwatch.Stop();
             Console.WriteLine("Remote: " + stopwatch.Elapsed.TotalMilliseconds.ToString());
-
+            
+            // local access
             string[] files = Directory.GetFiles("D:\\University\\4.2\\Pictures\\");
             stopwatch.Restart();
             foreach (string path in files)
